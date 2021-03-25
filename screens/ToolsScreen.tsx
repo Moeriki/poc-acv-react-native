@@ -1,3 +1,4 @@
+import * as Linking from 'expo-linking';
 import { StackNavigationProp } from '@react-navigation/stack';
 import * as React from 'react';
 import { Button, StyleSheet } from 'react-native';
@@ -21,6 +22,10 @@ export default function NewsScreen({ navigation }: Props) {
     navigation.push('BruttoNettoScreen');
   };
 
+  const handlePayPress = () => {
+    Linking.openURL('whatsapp://app');
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -31,6 +36,7 @@ export default function NewsScreen({ navigation }: Props) {
           darkColor="rgba(255,255,255,0.1)"
         />
         <Button onPress={handleBruttoNettoPress} title="Brutto-netto" />
+        <Button onPress={handlePayPress} title="WhatsApp" />
       </ScrollView>
     </View>
   );
