@@ -6,8 +6,12 @@ import * as React from 'react';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import NewsScreen from '../screens/NewsScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, NewsParamList, TabTwoParamList } from '../types';
+import AdvantagesScreen from '../screens/AdvantagesScreen';
+import {
+  AdvantagesParamList,
+  BottomTabParamList,
+  NewsParamList,
+} from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -29,8 +33,8 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
+        name="Advantages"
+        component={AdvantagesNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />
@@ -66,16 +70,16 @@ function NewsNavigator() {
   );
 }
 
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
+const AdvantagesStack = createStackNavigator<AdvantagesParamList>();
 
-function TabTwoNavigator() {
+function AdvantagesNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+    <AdvantagesStack.Navigator>
+      <AdvantagesStack.Screen
+        name="AdvantagesScreen"
+        component={AdvantagesScreen}
+        options={{ headerTitle: 'Voordelen' }}
       />
-    </TabTwoStack.Navigator>
+    </AdvantagesStack.Navigator>
   );
 }

@@ -11,9 +11,9 @@ export default {
               NewsScreen: 'news',
             },
           },
-          TabTwo: {
+          Advantages: {
             screens: {
-              TabTwoScreen: 'two',
+              AdvantagesScreen: 'advantages',
             },
           },
         },
