@@ -19,6 +19,7 @@ export default {
           Tools: {
             screens: {
               ToolsScreen: 'tools',
+              BruttoNettoScreen: 'brutto-netto',
             },
           },
         },

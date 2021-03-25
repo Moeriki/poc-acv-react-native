@@ -1,18 +1,37 @@
+import { StackNavigationProp } from '@react-navigation/stack';
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { Button, StyleSheet } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 import { TitleText } from '../components/StyledText';
-import { Text, View } from '../components/Themed';
+import { View } from '../components/Themed';
+import { ToolsParamList } from '../types';
 
-export default function NewsScreen() {
+type ToolsScreenNavigationProp = StackNavigationProp<
+  ToolsParamList,
+  'ToolsScreen'
+>;
+
+type Props = {
+  navigation: ToolsScreenNavigationProp;
+};
+
+export default function NewsScreen({ navigation }: Props) {
+  const handleBruttoNettoPress = () => {
+    navigation.push('BruttoNettoScreen');
+  };
+
   return (
     <View style={styles.container}>
-      <TitleText>Tools</TitleText>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
+      <ScrollView>
+        <TitleText>Tools</TitleText>
+        <View
+          style={styles.separator}
+          lightColor="#eee"
+          darkColor="rgba(255,255,255,0.1)"
+        />
+        <Button onPress={handleBruttoNettoPress} title="Brutto-netto" />
+      </ScrollView>
     </View>
   );
 }

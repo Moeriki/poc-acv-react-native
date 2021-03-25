@@ -19,4 +19,5 @@ export type AdvantagesParamList = {
 
 export type ToolsParamList = {
   ToolsScreen: undefined;
+  BruttoNettoScreen: undefined;
 };

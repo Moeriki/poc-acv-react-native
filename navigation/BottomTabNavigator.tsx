@@ -5,6 +5,7 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+import BruttoNettoScreen from '../screens/BruttoNettoScreen';
 import NewsScreen from '../screens/NewsScreen';
 import ToolsScreen from '../screens/ToolsScreen';
 import AdvantagesScreen from '../screens/AdvantagesScreen';
@@ -102,6 +103,11 @@ function ToolsNavigator() {
         name="ToolsScreen"
         component={ToolsScreen}
         options={{ headerTitle: 'Tools' }}
+      />
+      <ToolsStack.Screen
+        name="BruttoNettoScreen"
+        component={BruttoNettoScreen}
+        options={{ headerTitle: 'Brutto-netto' }}
       />
     </ToolsStack.Navigator>
   );
