@@ -4,6 +4,7 @@
   "scripts": {
     "android": "expo start --android",
     "eject": "expo eject",
+    "format": "prettier --write .",
     "ios": "expo start --ios",
     "start": "expo start",
     "test": "jest --watchAll",
