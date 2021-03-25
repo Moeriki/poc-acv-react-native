@@ -30,7 +30,7 @@ export default function BottomTabNavigator() {
         component={NewsNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <TabBarIcon name="document" color={color} />
           ),
         }}
       />
@@ -38,9 +38,7 @@ export default function BottomTabNavigator() {
         name="Advantages"
         component={AdvantagesNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="star" color={color} />,
         }}
       />
       <BottomTab.Screen
@@ -48,7 +46,7 @@ export default function BottomTabNavigator() {
         component={ToolsNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <TabBarIcon name="settings" color={color} />
           ),
         }}
       />
