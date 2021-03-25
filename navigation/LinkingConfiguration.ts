@@ -16,6 +16,11 @@ export default {
               AdvantagesScreen: 'advantages',
             },
           },
+          Tools: {
+            screens: {
+              ToolsScreen: 'tools',
+            },
+          },
         },
       },
       NotFound: '*',

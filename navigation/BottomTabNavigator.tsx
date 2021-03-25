@@ -6,11 +6,13 @@ import * as React from 'react';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import NewsScreen from '../screens/NewsScreen';
+import ToolsScreen from '../screens/ToolsScreen';
 import AdvantagesScreen from '../screens/AdvantagesScreen';
 import {
   AdvantagesParamList,
   BottomTabParamList,
   NewsParamList,
+  ToolsParamList,
 } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -35,6 +37,15 @@ export default function BottomTabNavigator() {
       <BottomTab.Screen
         name="Advantages"
         component={AdvantagesNavigator}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="ios-code" color={color} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="Tools"
+        component={ToolsNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />
@@ -81,5 +92,19 @@ function AdvantagesNavigator() {
         options={{ headerTitle: 'Voordelen' }}
       />
     </AdvantagesStack.Navigator>
+  );
+}
+
+const ToolsStack = createStackNavigator<ToolsParamList>();
+
+function ToolsNavigator() {
+  return (
+    <ToolsStack.Navigator>
+      <ToolsStack.Screen
+        name="ToolsScreen"
+        component={ToolsScreen}
+        options={{ headerTitle: 'Tools' }}
+      />
+    </ToolsStack.Navigator>
   );
 }

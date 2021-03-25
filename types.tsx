@@ -6,6 +6,7 @@ export type RootStackParamList = {
 export type BottomTabParamList = {
   News: undefined;
   Advantages: undefined;
+  Tools: undefined;
 };
 
 export type NewsParamList = {
@@ -14,4 +15,8 @@ export type NewsParamList = {
 
 export type AdvantagesParamList = {
   AdvantagesScreen: undefined;
+};
+
+export type ToolsParamList = {
+  ToolsScreen: undefined;
 };
